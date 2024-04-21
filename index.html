@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejeweled Játék</title>
+    <link rel="stylesheet" href="resources/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="game-link">Játék</a></li>
+            <li><a href="list.html" id="scoreboard-link">Ponttábla</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- A felső menüpontokaz úgy kell formázni, hogy ha rákattintunk akkor ne legyen más színe és ne legyen alulvonás sem-->
+<main>
+    <div id="separator-top"></div>
+    <div id="time-bar"></div>
+    <div id="game-container">
+        <div id="info-panel">
+            <div id="score">Pontszám: <span id="current-score">0</span></div>
+            <div id="target-score">Következő szint: <span id="required-score">100</span></div>
+            <div id="abilities">Aktív képességek: <span id="active-abilities">Nincs aktív képesség</span></div>
+        </div>
+
+        <div id="game-area">
+        </div>
+        <div id="buttons">
+            <div id="help-btn">
+                <button id="help-button">Segítség</button>
+            </div>
+            <div id="end-game">
+                <button id="end-game-button">Feladás</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="separator-bottom"></div>
+
+
+</main>
+
+<footer>
+    &copy; 2024 Bejeweled Játék
+</footer>
+
+<script src="script.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js" ></script>
+</body>
+</html>
