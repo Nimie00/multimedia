@@ -39,19 +39,6 @@ main {
     margin-right: 20px;
 }
 
-#game-area {
-    width: 800px;
-    height: 800px;
-    border: 1px solid #333;
-    margin-bottom: 20px;
-}
-
-.gem {
-    width: 80px;
-    height: 80px;
-    margin: 5px; /* Térköz a drágakövek között */
-    border 1px black solid;
-}
 
 #separator-top, #separator-bottom {
     background-image: url('images/bar.png');
