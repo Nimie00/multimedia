@@ -38,9 +38,7 @@ $( document ). ready ( function () {
                 const rowIndex = i;
                 const colIndex = j;
                 let gem = $('<img alt="" src="">').attr('src', gemSrc).addClass('gem').addClass(gemType).addClass('_' + rowIndex + '_' + colIndex);
-
-                gemArray[i][j] = gem;
-
+                
                 gem.css({
                     "position": "absolute",
                     "width": gemSize,
@@ -48,6 +46,8 @@ $( document ). ready ( function () {
                     "margin": paddingsize,
                     "cursor": "pointer",
                 });
+
+                gemArray[i][j] = gem;
 
             }
         }
@@ -121,9 +121,6 @@ $( document ). ready ( function () {
             const selectedColIndex = parseInt(selectedGem.attr('class').split(' ')[2].split('_')[2]);
             const clickedRowIndex = parseInt($(this).attr('class').split(' ')[2].split('_')[1]);
             const clickedColIndex = parseInt($(this).attr('class').split(' ')[2].split('_')[2]);
-            console.log("CSERE ELŐTT");
-            console.log("első elem "+selectedGem.attr('class').split(' ')[2]);
-            console.log("második elem "+$(this).attr('class').split(' ')[2]);
             if ((Math.abs(selectedRowIndex - clickedRowIndex) === 1 && selectedColIndex === clickedColIndex) ||
                 (Math.abs(selectedColIndex - clickedColIndex) === 1 && selectedRowIndex === clickedRowIndex)) {
                 // Ha a mezők szomszédosak, akkor cseréld ki őket egymással
@@ -136,12 +133,11 @@ $( document ). ready ( function () {
                 gemArray[clickedRowIndex][clickedColIndex].removeClass('_' + clickedRowIndex + '_' + clickedColIndex).addClass('_' + selectedRowIndex + '_' + selectedColIndex);
                 selectedGem.removeClass('_' + selectedRowIndex + '_' + selectedColIndex).addClass('_' + clickedRowIndex + '_' + clickedColIndex);
                 $(this).removeClass('_' + clickedRowIndex + '_' + clickedColIndex).addClass('_' + selectedRowIndex + '_' + selectedColIndex);
-                display();
-                console.log("Kicserélve!");
-                console.log("CSERE UTÁN");
-                console.log("első elem "+selectedGem.attr('class').split(' ')[2]);
-                console.log("második elem "+$(this).attr('class').split(' ')[2]);
 
+                //TODO:csere animáció megcsinálása:
+
+                display();
+                //TODO: MEGNÉZNI, HOGY HA CSERÉLÜNK AKKOR ELTŰNIK E ELEM
                 selectedGem = null;
             } else {
                 // Ha a mezők nem szomszédosak, akkor a kiválasztott gyémántot null-ra állítjuk vissza
