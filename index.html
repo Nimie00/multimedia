@@ -8,6 +8,7 @@
     <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
     <script src="script.js"></script>
 
+
 </head>
 <body>
 <header>
@@ -18,26 +19,37 @@
         </ul>
     </nav>
 </header>
-<!-- A felső menüpontokaz úgy kell formázni, hogy ha rákattintunk akkor ne legyen más színe és ne legyen alulvonás sem-->
 <main>
     <div id="separator-top"></div>
-    <div id="time-bar"></div>
+    <div id = "time-bar-container">
+        <div id="time-bar"></div>
+        <div id="timeIndicator">
+            <span id="currentTime"></span><span id="maxTime"></span>
+        </div>
+    </div>
     <div id="game-container">
+        <div id="gamefield">
+        </div>
         <div id="info-panel">
             <div id="score">Pontszám: <span id="current-score">0</span></div>
-            <div id="target-score">Következő szint: <span id="required-score">100</span></div>
-            <div id="abilities">Aktív képességek: <span id="active-abilities">Nincs aktív képesség</span></div>
-        </div>
-        <div id="game-area">
-        </div>
-        <div id="buttons">
-            <div id="help-btn">
-                <button id="help-button">Segítség</button>
+            <div id="multi">Szorzó: <span id="current-multiplier">1</span></div>
+            <div id="customMessage" class="custom-message"></div>
+            <div id="buttons">
+                <div id="help-btn">
+                    <button id="help-button">Segítség</button>
+                </div>
+                <div id="end-game">
+                    <button id="end-game-button">Feladás</button>
+                </div>
+                <div id="mute-music">
+                    <button id="mute-music-button">Zene ki/be</button>
+                </div>
+                <div id="mute-sounds">
+                    <button id="mute-sounds-button">Hangeffektek ki/be</button>
+                </div>
             </div>
-            <div id="end-game">
-                <button id="end-game-button">Feladás</button>
-            </div>
         </div>
+
     </div>
 
     <div id="separator-bottom"></div>

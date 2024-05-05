@@ -12,3 +12,10 @@
 12. A játék alatt rúnák is eshetnek alacsony eséllyel, amelyek különböző bónuszokat nyújthatnak. Ezek csak az adott pályán érvényesek, de bármennyi ideig tárolhatjuk őket.
 //TODO: Kitalálni legalább 5 power up-ot.
 //TODO: A következő pályákhoz ki kell találnunk valami eltérést az elsőhöz képest.
+
+
+folyamat: Létrehozzuk a táblát, és a köveket tárolo 2d-s array-t .
+A tábla minden slot-jára létrehozunk egy gemet- ami megkapja a megfelelő pozíciót.
+Megkapják a gemek a megfelelő helyüket, megkapják a rájuk kattintást.
+Feltöltjük a táblát és a gemeket tartalmazó array-okat, és eltároljuk egy másik arrayban az adott gemek típusát.
+Ha rákattintunk az egyik elemre akkor azt elmenti a selectedgem-be majd ha egy másikra is akkor megcseréli a kettőt.

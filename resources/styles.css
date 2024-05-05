@@ -7,9 +7,10 @@ body, html {
 
 header {
     background-color: #333;
-    color: #fff;
+    color: white;
     padding: 10px;
     text-align: center;
+    text-decoration: none;
 }
 
 nav ul {
@@ -19,8 +20,11 @@ nav ul {
 }
 
 nav ul li {
+    background-color: #512242;
+    color: yellow;
     display: inline;
     margin-right: 20px;
+    font-size: 1.2em;
 }
 
 main {
@@ -32,7 +36,8 @@ main {
 
 #game-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Az elemek felső szélére igazítja őket */
+    width: 1000px;
 }
 
 #info-panel {
@@ -48,9 +53,9 @@ main {
 }
 
 #time-bar {
-    height: 10px;
+    height: 30px;
     background-color: #00ff00;
-    width: 100%;
+    width: 547px;
 }
 
 footer {
@@ -58,4 +63,37 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+#timeIndicator {
+    font-size: 1.4em;
+    position: absolute; /* A pozícióhoz való abszolút elhelyezéshez */
+    top: 25%; /* A vertikális középre helyezéshez */
+    left: 50%; /* Az horizontális középre helyezéshez */
+}
+
+.custom-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    z-index: 9999;
+    display: none;
+    animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    25% { opacity: 0.5; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+button {
+    height: 40px;
+    width: 200px;
 }
